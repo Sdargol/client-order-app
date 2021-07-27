@@ -1,0 +1,116 @@
+:root {
+    --main-bg-color: #2a3035;
+    --main-border-color: #3e454e;
+    --card-second-text-color: rgb(255, 121, 198);
+  }
+
+.App-user-card {
+    min-width: 576px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.25em;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-border-color);
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: calc(10px + 2vmin);
+}
+
+.App-user-card-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.App-user-card-wrapper-push {
+    margin-right: auto;
+}
+
+.App-user-avatar {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+}
+  
+.App-user-card-separator {
+    background-color: #3e454e;
+    height: 21px;
+    width: 2px;
+    border-radius: 1px;
+}
+  
+.App-user-card p {
+    max-width: 9ch;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.App-user-card button {
+    background-color: rgba(36, 41, 46, 0);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 5px;
+    border-style: none;
+    transition: background-color 0.3s;
+    transition-timing-function: ease;
+}
+
+.App-user-card button:hover {
+    background-color: rgba(36, 41, 46, 1);   
+}
+
+.App-user-card button:active {
+    background-color: rgb(64, 71, 78);   
+}
+
+.App-user-card-btn {
+    display: block;
+    width: 21px;
+    height: 21px;
+}
+
+.App-user-card-group-btn {
+    width: 85px;
+    justify-content: space-between;
+}
+
+.App-user-card-wrapper:nth-child(1){
+    margin-right: 28px;
+    /*color: #8d9bad;*/
+    color: var(--card-second-text-color);
+    font-size: calc(10px + 1vmin);
+}
+
+@media only screen and (max-width: 576px) {
+    .App-user-card {
+        min-width: 340px;
+        height: 75px;
+        font-size: 21px;
+    }
+
+    .App-user-card-wrapper:nth-child(1){
+        margin-right: 16px;
+        font-size: 16px;
+    }
+
+    .App-user-avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+    }
+
+    .App-user-card-btn {
+        width: 16px;
+        height: 16px;
+    }
+
+    .App-user-card-group-btn {
+        width: 75px;
+    }
+}
