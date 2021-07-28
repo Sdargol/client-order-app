@@ -17,6 +17,7 @@
     box-sizing: border-box;
     margin-bottom: 15px;
     font-size: calc(10px + 2vmin);
+    color: var(--color-text-primary);
 }
 
 .App-user-card-wrapper {
@@ -95,14 +96,14 @@
     }
 
     .App-user-card-wrapper:nth-child(1){
-        margin-right: 16px;
+        margin-right: 12px;
         font-size: 16px;
     }
 
     .App-user-avatar {
         width: 48px;
         height: 48px;
-        margin-right: 16px;
+        margin-right: 10px;
     }
 
     .App-user-card-btn {

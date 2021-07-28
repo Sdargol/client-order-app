@@ -1,0 +1,6 @@
+<button className="App-button" onClick={() => {
+            createClient({id:0, login:'u19305300', name:'Dmitriy', orders:[]});
+          }}>Добавить пользователя</button>
+          <button className="App-button" onClick={() => {
+            createOrder({clientLogin:'u19305300', order:{id:0,info:'Заказ футболки bootcamp'}});
+          }}>Добавить заказ</button>

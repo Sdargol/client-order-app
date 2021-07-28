@@ -22,7 +22,7 @@ public class OrdersController {
     }
 
     @PostMapping
-    public ResponseEntity<ContentMessageDTO<OrderDTO>> createClient(@RequestBody CreateOrderDTO order){
+    public ResponseEntity<ContentMessageDTO<OrderDTO>> createOrder(@RequestBody CreateOrderDTO order){
         ContentMessageDTO<OrderDTO> msg = new ContentMessageDTO<>("Order successfully created", orderService.create(order));
         return ResponseEntity.ok(msg);
     }

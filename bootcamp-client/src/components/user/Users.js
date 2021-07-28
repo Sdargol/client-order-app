@@ -2,9 +2,11 @@ import { useFetch } from '../../hooks/http/useFetch';
 import { Card } from '../app/card/Card';
 import { FetchError } from '../app/error/FetchError';
 import '../../App.css';
+import { createClient } from '../../http_api/clients/clientApi';
+import { createOrder } from '../../http_api/orders/orderApi';
 
 export const Users = () => {
-    const host = 'http://192.168.1.6:8080/api/v1/clients';
+    const host = 'http://localhost:8080/api/v1/clients';
 
     const header = {
       method: "GET",
