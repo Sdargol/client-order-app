@@ -1,9 +1,3 @@
-:root {
-    --main-bg-color: #2a3035;
-    --main-border-color: #3e454e;
-    --card-second-text-color: rgb(255, 121, 198);
-  }
-
 .App-user-card {
     min-width: 576px;
     display: flex;

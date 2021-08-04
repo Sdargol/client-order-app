@@ -4,3 +4,22 @@
           <button className="App-button" onClick={() => {
             createOrder({clientLogin:'u19305300', order:{id:0,info:'Заказ футболки bootcamp'}});
           }}>Добавить заказ</button>
+
+<button className="App-button" onClick={() => {
+            createClient({id:0, login:'u19305301', name:'Test', orders:[{id:0,info:'Тест создания пользователя'}]});
+          }}>Добавить пользователя</button>
+          <button className="App-button" onClick={() => {
+            createOrder({clientLogin:'u19305300', order:{id:0,info:'Просто заказ (по приколу)'}});
+          }}>Добавить заказ</button>
+
+<div className="User-editor-input-container">
+                <label className="User-editor-input-label" htmlFor="username-input-id">Имя пользователя</label>
+                <input onChange={handlerInputUserName}
+                    id="username-input-id"
+                    className="User-editor-input"
+                    type="input"
+                    placeholder="Username..."
+                    autoComplete="off"
+                    aria-label="New user name"
+                    value={userName.name}></input>
+            </div>

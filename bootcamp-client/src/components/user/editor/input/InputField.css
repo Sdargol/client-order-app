@@ -1,0 +1,38 @@
+.User-editor-input{
+    background-color: var(--color-input-bg);
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--main-border-color);
+    border-radius: 6px;
+    color: var(--color-text-primary);
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+    padding: 5px 14px;
+    vertical-align: middle;
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+    font-family: inherit;
+}
+
+.User-editor-input:focus {
+    border-color: var(--color-state-focus-border);
+    box-shadow: var(--color-state-focus-shadow);
+    outline: none;
+}
+
+.User-editor-input::placeholder{
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.User-editor-input-container{
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 340px;
+}
+
+.User-editor-input-label{
+    margin-right: auto;
+    margin-bottom: 9px;
+    opacity: 0.6;
+}

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../../hooks/http/useFetch";
+import { FetchError } from "../../app/error/FetchError";
+import { OrderCard } from "./card/OrderCard";
+import { InputField } from "./input/InputField";
 import './UserEditor.css';
 
 export const UserEditor = () => {
@@ -20,20 +23,18 @@ export const UserEditor = () => {
         setUserName({...userName, name:e.target.value});
     }
 
+    // можно потом поправить 
+    if(err){
+        return <FetchError/>
+    }
+
     return (
         <div className="App User-editor-container">
             <h1>UserEditor</h1>
-            <div className="User-editor-input-container">
-                <label className="User-editor-input-label" htmlFor="username-input-id">Имя пользователя</label>
-                <input onChange={handlerInputUserName}
-                    id="username-input-id"
-                    className="User-editor-input"
-                    type="input"
-                    placeholder="Username..."
-                    autoComplete="off"
-                    aria-label="New user name"
-                    value={userName.name}></input>
-            </div>
+            <InputField val = {userName.name} handler = {handlerInputUserName} name = "Имя пользователя"/>
+            <div className="User-editor-orders-container">
+                {res ? res.orders.map((obj, i) => <OrderCard key = {i} id = {obj.id} info = {obj.info}></OrderCard>) : ""}
+            </div> 
         </div>
     )
 }
