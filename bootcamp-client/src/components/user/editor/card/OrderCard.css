@@ -24,6 +24,12 @@
 .Order-card-header h1{
     margin-top: 9px;
     margin-bottom: 9px;
+    color: rgb(130 198 188);
+}
+
+.Order-card-header p {
+    text-align: left;
+    line-height: 20px;
 }
 
 .Order-card-header button {

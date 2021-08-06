@@ -78,8 +78,33 @@
 .App-user-card-wrapper:nth-child(1){
     margin-right: 28px;
     /*color: #8d9bad;*/
-    color: var(--card-second-text-color);
+    color: var(--color-text-primary);
     font-size: calc(10px + 1vmin);
+}
+
+.Animation {
+    animation-duration: 0.5s;
+    animation-name: card_animation;
+    animation-timing-function: ease-out;
+}
+
+@keyframes card_animation {
+    from {
+      transform: scale(100%);
+      opacity: 1;
+    }
+
+    25%{
+        transform: scale(110%);
+    }
+
+    85%{
+        opacity: 0;
+    }
+  
+    to {
+      transform: scale(0);
+    }
 }
 
 @media only screen and (max-width: 576px) {
